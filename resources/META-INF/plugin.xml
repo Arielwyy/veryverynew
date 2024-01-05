@@ -1,0 +1,31 @@
+<idea-plugin>
+    <id>com.your.company.unique.plugin.id</id>
+    <name>休息提示小助手</name>
+    <version>2.0</version>
+    <vendor>1234555555555</vendor>
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.python-pro-capable</depends>
+
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow factoryClass="window.NewBeeToolWindow"
+                    id="NewBeeToolWindow"
+                    anchor="bottom"
+                    secondary="false"
+                    icon="/icons/01.gif"
+                    canCloseContents="true"
+        />
+    </extensions>
+    <application-components>
+    </application-components>
+    <actions>
+        <action id="NewBeeAction" class="action.NewBeeAction" text="NewBeeAction" description="NewBeeAction">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+
+</idea-plugin>
